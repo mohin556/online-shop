@@ -1,0 +1,202 @@
+[
+  {
+    "id": "642c155b2c4774f05c36eea1",
+    "name": "Apple",
+    "image": "https://i.ibb.co/gzYVXjz/fruits.png",
+    "description": "Fresh and crispy apples.",
+    "category": "Fruits",
+    "price": "2.00"
+  },
+  {
+    "id": "642c155b2c4774f05c36eea2",
+    "name": "Banana",
+    "image": "https://i.ibb.co/vXrwCzW/bunch-ripe-banana-fruits-isolated-80510-1079.jpg",
+    "description": "Sweet and ripe bananas.",
+    "category": "Fruits",
+    "price": "1.50"
+  },
+  {
+    "id": "642c155b2c4774f05c36eea3",
+    "name": "Bread",
+    "image": "https://i.ibb.co/XYR5hG1/bread.png",
+    "description": "Soft and fresh whole wheat bread.",
+    "category": "Bakery",
+    "price": "2.20"
+  },
+  {
+    "id": "642c155b2c4774f05c36eea4",
+    "name": "Tomato",
+    "image": "https://i.ibb.co/2vDfwCv/tomatoes-144627-15411.jpg",
+    "description": "Juicy and red tomatoes.",
+    "category": "Vegetables",
+    "price": "1.80"
+  },
+  {
+    "id": "642c155b2c4774f05c36eea5",
+    "name": "Broccoli",
+    "image": "https://i.ibb.co/rwBqd0S/broclice.jpg",
+    "description": "Fresh and green broccoli.",
+    "category": "Vegetables",
+    "price": "2.50"
+  },
+  {
+    "id": "642c155b2c4774f05c36eea6",
+    "name": "Strawberry",
+    "image": "https://i.ibb.co/XtwMFn4/strawberry.png",
+    "description": "Sweet and fresh strawberries.",
+    "category": "Fruits",
+    "price": "3.50"
+  },
+  {
+    "id": "642c155b2c4774f05c36eea7",
+    "name": "Grapes",
+    "image": "https://i.ibb.co/D4JBXC5/green-red-grape-isolated-white-1232-1957.jpg",
+    "description": "Juicy and sweet grapes.",
+    "category": "Fruits",
+    "price": "3.00"
+  },
+  {
+    "id": "642c155b2c4774f05c36eea8",
+    "name": "Orange",
+    "image": "https://i.ibb.co/0FbNbhs/Orange.png",
+    "description": "Citrus and tangy oranges.",
+    "category": "Fruits",
+    "price": "2.50"
+  },
+  {
+    "id": "642c155b2c4774f05c36eea9",
+    "name": "Carrot",
+    "image": "https://i.ibb.co/CwxqZkd/Carrot.png",
+    "description": "Organic and crunchy carrots.",
+    "category": "Vegetables",
+    "price": "1.20"
+  },
+  {
+    "id": "642c155b2c4774f05c36eeaa",
+    "name": "Lettuce",
+    "image": "https://i.ibb.co/wzJRZ11/fresh-chinese-cabbage-white-background-closeup-1137115-408.jpg",
+    "description": "Crisp and fresh lettuce.",
+    "category": "Vegetables",
+    "price": "1.50"
+  },
+  {
+    "id": "642c155b2c4774f05c36eeab",
+    "name": "Spinach",
+    "image": "https://i.ibb.co/zQQVsCs/spinach.jpg",
+    "description": "Healthy and fresh spinach.",
+    "category": "Vegetables",
+    "price": "2.20"
+  },
+  {
+    "id": "642c155b2c4774f05c36eeac",
+    "name": "Milk",
+    "image": "https://i.ibb.co/gtnXGPS/chili.png",
+    "description": "Full cream milk.",
+    "category": "Dairy",
+    "price": "3.00"
+  },
+  {
+    "id": "642c155b2c4774f05c36eead",
+    "name": "Eggs",
+    "image": "https://i.ibb.co/2My9g2T/three-fresh-organic-raw-eggs-isolated-white-surface-114579-43677.jpg",
+    "description": "Free-range eggs.",
+    "category": "Dairy",
+    "price": "2.80"
+  },
+  {
+    "id": "642c155b2c4774f05c36eeae",
+    "name": "Cheese",
+    "image": "https://i.ibb.co/rwBqd0S/broclice.jpg",
+    "description": "Rich and creamy cheese.",
+    "category": "Dairy",
+    "price": "4.00"
+  },
+  {
+    "id": "642c155b2c4774f05c36eeaf",
+    "name": "Yogurt",
+    "image": "https://i.ibb.co/rwBqd0S/broclice.jpg",
+    "description": "Smooth and tasty yogurt.",
+    "category": "Dairy",
+    "price": "3.20"
+  },
+  {
+    "id": "642c155b2c4774f05c36eeb0",
+    "name": "Butter",
+    "image": "https://i.ibb.co/rwBqd0S/broclice.jpg",
+    "description": "Creamy and rich butter.",
+    "category": "Dairy",
+    "price": "2.60"
+  },
+  {
+    "id": "642c155b2c4774f05c36eeb1",
+    "name": "Croissant",
+    "image": "https://i.ibb.co/b33BKBY/cakee.png",
+    "description": "Flaky and buttery croissant.",
+    "category": "Bakery",
+    "price": "1.80"
+  },
+  {
+    "id": "642c155b2c4774f05c36eeb2",
+    "name": "Bagel",
+    "image": "https://i.ibb.co/Vj3cQGs/fresh-french-croissant-table-140725-5650.jpg",
+    "description": "Chewy and fresh bagel.",
+    "category": "Bakery",
+    "price": "1.50"
+  },
+  {
+    "id": "642c155b2c4774f05c36eeb3",
+    "name": "Muffin",
+    "image": "https://i.ibb.co/DYYtXZx/Mufin1.png",
+    "description": "Sweet and moist muffin.",
+    "category": "Bakery",
+    "price": "2.00"
+  },
+  {
+    "id": "642c155b2c4774f05c36eeb4",
+    "name": "Cake",
+    "image": "https://i.ibb.co/b33BKBY/cakee.png",
+    "description": "Delicious and creamy cake.",
+    "category": "Bakery",
+    "price": "3.50"
+  },
+  {
+    "id": "642c155b2c4774f05c36eeb5",
+    "name": "Orange Juice",
+    "image": "https://i.ibb.co/qJBgDvH/Juice.png",
+    "description": "Freshly squeezed orange juice.",
+    "category": "Beverages",
+    "price": "3.50"
+  },
+  {
+    "id": "642c155b2c4774f05c36eeb6",
+    "name": "Coffee",
+    "image": "https://i.ibb.co/rwBqd0S/broclice.jpg",
+    "description": "Freshly brewed coffee.",
+    "category": "Beverages",
+    "price": "2.00"
+  },
+  {
+    "id": "642c155b2c4774f05c36eeb7",
+    "name": "Tea",
+    "image": "https://i.ibb.co/rwBqd0S/broclice.jpg",
+    "description": "Refreshing and hot tea.",
+    "category": "Beverages",
+    "price": "1.50"
+  },
+  {
+    "id": "642c155b2c4774f05c36eeb8",
+    "name": "Smoothie",
+    "image": "https://i.ibb.co/rwBqd0S/broclice.jpg",
+    "description": "Healthy and delicious smoothie.",
+    "category": "Beverages",
+    "price": "4.00"
+  },
+  {
+    "id": "642c155b2c4774f05c36eeb9",
+    "name": "Chicken Breast",
+    "image": "https://i.ibb.co/YQqLxdp/grill-slice-lunch-butcher-juicy-1203-5879.jpg",
+    "description": "Boneless and skinless chicken breasts.",
+    "category": "Meat",
+    "price": "5.00"
+  }
+]
