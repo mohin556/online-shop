@@ -17,7 +17,7 @@
 //         const user = { name, contact, location };
 
 //         try {
-//             const response = await fetch('https://shop-server-pi.vercel.app/user', {
+//             const response = await fetch('http://localhost:5000/user', {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json',
@@ -117,7 +117,7 @@
 //     const userData = { name, contact };
 
 //     try {
-//       const response = await fetch('https://shop-server-pi.vercel.app/user', {
+//       const response = await fetch('http://localhost:5000/user', {
 //         method: 'POST',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -199,6 +199,7 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import { useLocation, useNavigate } from 'react-router-dom';
 import loginImg from '../../assets/images/logins.jpg';
+import { toast } from "react-toastify";
 
 const Login = () => {
 
@@ -208,6 +209,60 @@ const Login = () => {
 
   const from = location.state?.from?.pathname || "/";
   console.log('login state from here', location.state);
+
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+  //   const form = event.target;
+  //   const name = form.name.value;
+  //   const contact = form.contact.value;
+  //   const location = form.location.value;
+
+  //   const userData = { name, contact, location };
+
+  //   try {
+  //     const response = await fetch('http://localhost:5000/user', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(userData),
+  //     });
+
+  //     if (!response.ok) {
+  //       throw new Error('Failed to create user');
+  //     }
+
+  //     const result = await response.json();
+
+  //     if (response.status === 200) {
+  //       Swal.fire({
+  //         icon: 'info',
+  //         title: 'User already exists',
+  //         text: 'User already exists with the provided contact number.',
+  //       });
+  //     } else if (response.status === 201) {
+  //       Swal.fire({
+  //         icon: 'success',
+  //         title: 'User created',
+  //         text: 'User created successfully.',
+  //       });
+  //     }
+
+  //     // Store user data in localStorage
+  //     localStorage.setItem('contact', JSON.stringify(contact));
+  //     setUser(result);
+  //     navigate('/user');
+  //   } catch (error) {
+  //     console.error('Error:', error);
+  //     Swal.fire({
+  //       icon: 'error',
+  //       title: 'Error',
+  //       text: 'Failed to create user.',
+  //     });
+  //   }
+  //   navigate(from, { replace: true });
+  // };
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -219,49 +274,60 @@ const Login = () => {
     const userData = { name, contact, location };
 
     try {
-      const response = await fetch('https://shop-server-pi.vercel.app/user', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userData),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to create user');
-      }
-
-      const result = await response.json();
-
-      if (response.status === 200) {
-        Swal.fire({
-          icon: 'info',
-          title: 'User already exists',
-          text: 'User already exists with the provided contact number.',
+        const response = await fetch('http://localhost:5000/user', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData),
         });
-      } else if (response.status === 201) {
-        Swal.fire({
-          icon: 'success',
-          title: 'User created',
-          text: 'User created successfully.',
-        });
-      }
 
-      // Store user data in localStorage
-      localStorage.setItem('contact', JSON.stringify(contact));
-      setUser(result);
-      navigate('/user');
+        if (!response.ok) {
+            throw new Error('Failed to create user');
+        }
+
+        const result = await response.json();
+
+        if (response.status === 200) {
+            toast.info("User already exists with the provided contact number.", {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                theme: "colored",
+            });
+        } else if (response.status === 201) {
+            toast.success("Welcome back! You have successfully logged in.", {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                theme: "colored",
+            });
+        }
+
+        // Store user data in localStorage
+        localStorage.setItem('contact', JSON.stringify(contact));
+        setUser(result);
+        navigate('/user');
     } catch (error) {
-      console.error('Error:', error);
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Failed to create user.',
-      });
+        console.error('Error:', error);
+        toast.error("Failed to create user.", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "colored",
+        });
     }
     navigate(from, { replace: true });
-  };
-
+};
   return (
     <div className="hero bg-base-200 min-h-screen">
       

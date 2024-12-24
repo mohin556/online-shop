@@ -6,8 +6,11 @@ import axios from 'axios';
 
 
  export const axiosSecure = axios.create({
-    baseURL: 'https://shop-server-pi.vercel.app'
+    baseURL: 'http://localhost:5000'
  })
+//  export const axiosSecure = axios.create({
+//     baseURL: 'http://localhost:5000'
+//  })
 const useAxiosSecure = () => {
     
 

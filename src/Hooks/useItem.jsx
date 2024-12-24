@@ -9,7 +9,7 @@ const useItem =() =>{
     const [loading,setLoading] = useState(true)
     
     useEffect(() => {
-        fetch('https://shop-server-pi.vercel.app/items')
+        fetch('http://localhost:5000/items')
             .then(res => res.json())
             .then(data => {setItems(data);setLoading(false)}); 
              

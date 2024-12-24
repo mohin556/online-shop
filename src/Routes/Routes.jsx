@@ -92,7 +92,7 @@ export const router = createBrowserRouter([
       // {
       //   path: 'oders/:id',
       //   element: <OderHistory />,
-      //   loader: ({ params }) => fetch(`https://shop-server-pi.vercel.app/orders/${params.id}`)
+      //   loader: ({ params }) => fetch(`http://localhost:5000/orders/${params.id}`)
       // },
       {
         path:'userHome',
@@ -123,17 +123,17 @@ export const router = createBrowserRouter([
       {
         path: 'updateItem/:id',
         element: <UpdateItem />,
-        loader: ({ params }) => fetch(`https://shop-server-pi.vercel.app/items/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/items/${params.id}`)
       },
       {
         path: 'updateBanner/:id',
         element: <BannerUpdate />,
-        loader: ({ params }) => fetch(`https://shop-server-pi.vercel.app/banners/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/banners/${params.id}`)
       },
       {
         path: 'paymentsOders/:id',
         element: <OderDetails />,
-        loader: ({ params }) => fetch(`https://shop-server-pi.vercel.app/orders/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/orders/${params.id}`)
       },
       {
         path:'drivers',

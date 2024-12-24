@@ -7,6 +7,7 @@ import useCart from './../../../../Hooks/useCart';
 import { ImUsers } from "react-icons/im";
 import { useQuery } from '@tanstack/react-query';
 import useAdmin from '../../../../Hooks/useAdmin';
+import { toast } from "react-toastify";
 
 const UserDetails = ({ user, index }) => {
     const axiosSecure = useAxiosSecure();
@@ -50,33 +51,51 @@ const UserDetails = ({ user, index }) => {
                 });
             });
     }
+    // const handleDeleteUser = (id) => {
+    //     Swal.fire({
+    //         title: "Are you sure?",
+    //         text: "You won't be able to revert this!",
+    //         icon: "warning",
+    //         showCancelButton: true,
+    //         confirmButtonColor: "#3085d6",
+    //         cancelButtonColor: "#d33",
+    //         confirmButtonText: "Yes, delete it!"
+    //     }).then((result) => {
+    //         if (result.isConfirmed) {
+    //             axiosSecure.delete(`/users/${id}`)
+    //                 .then(res => {
+    //                     if (res.data.deletedCount > 0) {
+    //                         refetch();
+    //                         Swal.fire({
+    //                             title: "Deleted!",
+    //                             text: "Your file has been deleted.",
+    //                             icon: "success"
+    //                         });
+
+    //                     }
+    //                 });
+    //         }
+    //     });
+
+    // }
+   
     const handleDeleteUser = (id) => {
-        Swal.fire({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
-        }).then((result) => {
-            if (result.isConfirmed) {
-                axiosSecure.delete(`/users/${id}`)
-                    .then(res => {
-                        if (res.data.deletedCount > 0) {
-                            refetch();
-                            Swal.fire({
-                                title: "Deleted!",
-                                text: "Your file has been deleted.",
-                                icon: "success"
-                            });
+        if (window.confirm("Are you sure? This action cannot be undone!")) {
+            axiosSecure.delete(`/users/${id}`)
+                .then(res => {
+                    if (res.data.deletedCount > 0) {
+                        refetch();
+                        toast.success("User deleted successfully!");
+                    } else {
+                        toast.error("Failed to delete the user.");
+                    }
+                })
+                .catch(() => {
+                    toast.error("An error occurred while deleting the user.");
+                });
+        }
+    };
 
-                        }
-                    });
-            }
-        });
-
-    }
     return (
 
         <tr style={{ color: '#8a1538' }} className="bg-base-200 font-bold">

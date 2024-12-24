@@ -54,10 +54,51 @@ const MyCart = () => {
     //     }
     //   };
     
-    const handleProced = async (cart) => {
-        const totalPrice = cart.reduce((total, item) => total + parseFloat(item.price), 0);
+    // const handleProced = async (cart) => {
+    //     const totalPrice = cart.reduce((total, item) => total + parseFloat(item.price), 0);
       
-        const Oder = {
+    //     const Oder = {
+    //       name: user.name,
+    //       location: user.location,
+    //       contact: user.contact,
+    //       price: totalPrice,
+    //       date: new Date(),
+    //       cardIds: cart.map(item => item._id),
+    //       itemIds: cart.map(item => item.itemId),
+    //       status: 'pending',
+    //     };
+      
+    //     try {
+    //       const res = await axiosSecure.post('/oderConfirm', Oder);
+       
+    //       refetch();
+      
+    //       if (res.data?.oderResult?.insertedId) {
+
+    //         await Swal.fire({
+    //           position: "top-end",
+    //           icon: "success",
+    //           title: "Your order has been confirmed",
+    //           showConfirmButton: false,
+    //           timer: 1500,
+    //         });
+    //         // navigate('/dashboard/oderConfirm');
+    //           navigate('/dashboard/oders');
+    //       }
+    //     } catch (error) {
+    //       console.error("Error confirming order:", error);
+    //       Swal.fire({
+    //         icon: "error",
+    //         title: "Oops...",
+    //         text: "Something went wrong! Please try again later.",
+    //       });
+    //     }
+    //   };
+      
+    const handleProced = async (cart) => {
+      const totalPrice = cart.reduce((total, item) => total + parseFloat(item.price), 0);
+  
+      const Oder = {
           name: user.name,
           location: user.location,
           contact: user.contact,
@@ -66,35 +107,41 @@ const MyCart = () => {
           cardIds: cart.map(item => item._id),
           itemIds: cart.map(item => item.itemId),
           status: 'pending',
-        };
-      
-        try {
+      };
+  
+      try {
           const res = await axiosSecure.post('/oderConfirm', Oder);
-       
+  
           refetch();
-      
+  
           if (res.data?.oderResult?.insertedId) {
-
-            await Swal.fire({
-              position: "top-end",
-              icon: "success",
-              title: "Your order has been confirmed",
-              showConfirmButton: false,
-              timer: 1500,
-            });
-            // navigate('/dashboard/oderConfirm');
+              toast.success("Order is confirmed and will be processed shortly.", {
+                  position: "top-right",
+                  autoClose: 1500,
+                  hideProgressBar: true,
+                  closeOnClick: true,
+                  pauseOnHover: false,
+                  draggable: true,
+                  theme: "colored",
+              });
+  
+              // Navigate to orders page after confirmation
               navigate('/dashboard/oders');
           }
-        } catch (error) {
-          console.error("Error confirming order:", error);
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Something went wrong! Please try again later.",
+      } catch (error) {
+          console.error('Error:', error);
+  
+          toast.error("Failed to confirm your order. Please try again.", {
+              position: "top-right",
+              autoClose: 3000,
+              hideProgressBar: true,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              theme: "colored",
           });
-        }
-      };
-      
+      }
+  };
     return (
       <div className="p-4">
       <div className="bg-white shadow-md rounded-lg p-4 max-w-3xl mx-auto mb-4">
