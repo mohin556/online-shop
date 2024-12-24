@@ -12,7 +12,7 @@ const useUser = () => {
         const storedContact = JSON.parse(localStorage.getItem('contact'));
 
         if (storedContact) {
-          const response = await axios.post('http://localhost:5000/user', { contact: storedContact });
+          const response = await axios.post('https://shop-server-pi.vercel.app/user', { contact: storedContact });
 
           if (response.data) {
             setUser(response.data);

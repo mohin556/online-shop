@@ -81,7 +81,7 @@ const User = () => {
 
   //       if (storedContact) {
   //         // Fetch the user details from the backend using the contact number
-  //         const response = await axios.post('http://localhost:5000/user', { contact: storedContact });
+  //         const response = await axios.post('https://shop-server-pi.vercel.app/user', { contact: storedContact });
 
   //         if (response.data) {
   //           // Save the user details in state and localStorage
