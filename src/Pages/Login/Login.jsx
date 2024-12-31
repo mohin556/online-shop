@@ -17,7 +17,7 @@
 //         const user = { name, contact, location };
 
 //         try {
-//             const response = await fetch('https://shop-server-pi.vercel.app/user', {
+//             const response = await fetch('http://localhost:5000/user', {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json',
@@ -117,7 +117,7 @@
 //     const userData = { name, contact };
 
 //     try {
-//       const response = await fetch('https://shop-server-pi.vercel.app/user', {
+//       const response = await fetch('http://localhost:5000/user', {
 //         method: 'POST',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -194,7 +194,7 @@
 // };
 
 // export default Login;
-
+// Working code 
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -220,7 +220,7 @@ const Login = () => {
   //   const userData = { name, contact, location };
 
   //   try {
-  //     const response = await fetch('https://shop-server-pi.vercel.app/user', {
+  //     const response = await fetch('http://localhost:5000/user', {
   //       method: 'POST',
   //       headers: {
   //         'Content-Type': 'application/json',
@@ -274,7 +274,7 @@ const Login = () => {
     const userData = { name, contact, location };
 
     try {
-        const response = await fetch('https://shop-server-pi.vercel.app/user', {
+        const response = await fetch('http://localhost:5000/user', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -391,5 +391,5 @@ const Login = () => {
     </div>
   );
 };
-
+          
 export default Login;
